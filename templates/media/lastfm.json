@@ -1,0 +1,125 @@
+{
+  "name": "LastFm",
+  "id": "6e114d31-83e7-483a-9fe4-f529d90c5c5d",
+  "appVersion": "0.1.0",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": false,
+        "quoteChar": "\"",
+        "hasCommaDecimals": false
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false,
+        "transpose": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": [],
+        "skimUnreadableChars": false
+      }
+    },
+    "sharedTransformationState": {
+      "transformationName": "LastFm",
+      "idAggregationConfig": [
+        {
+          "name": "field 4",
+          "typeConfig": {
+            "dateType": "date",
+            "type": "DATE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateFormat": "dd MMM yyyy"
+          },
+          "aggregation": "AVG",
+          "fillIds": true
+        }
+      ],
+      "nameRegexes": [],
+      "groupedNames": [
+        {
+          "name": "Artist",
+          "items": ["field 1"]
+        }, {
+          "name": "Album",
+          "items": ["field 2"]
+        }, {
+          "name": "Title",
+          "items": ["field 3"]
+        }
+      ],
+      "newGroups": [],
+      "minimumRecords": 0,
+      "selectedTemplateId": "6e114d31-83e7-483a-9fe4-f529d90c5c5d",
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {
+        "Album": {
+          "tags": [],
+          "typeConfig": {
+            "dateType": "date",
+            "type": "VALUE_DEFAULT",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateFormat": ""
+          },
+          "name": "Album",
+          "group": "No group",
+          "aggregation": "COUNT UNIQUE",
+          "ignore": false
+        },
+        "Artist": {
+          "tags": [],
+          "typeConfig": {
+            "dateType": "date",
+            "type": "VALUE_DEFAULT",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateFormat": ""
+          },
+          "name": "Artist",
+          "group": "No group",
+          "aggregation": "COUNT UNIQUE",
+          "ignore": false
+        },
+        "Title": {
+          "tags": [],
+          "typeConfig": {
+            "dateType": "date",
+            "type": "VALUE_DEFAULT",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateFormat": ""
+          },
+          "name": "Title",
+          "group": "No group",
+          "aggregation": "COUNT",
+          "ignore": false
+        }
+      },
+      "optionalTransformations": {
+        "mergeFields": true
+      },
+      "groupByConfig": [],
+      "splitValuesSeparators": [],
+      "transformationType": 2,
+      "idFormat": "ID::DATE",
+      "dateFormat": "dd MMM yyyy",
+      "multipleDateFormats": {
+        "field 4": "dd MMM yyyy"
+      },
+      "useMultipleDateFormats": false,
+      "fillDateIds": true,
+      "groupColumns": [],
+      "idColumns": [],
+      "excludedGroups": [],
+      "includedGroups": []
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {},
+      "splitNamesSeparators": []
+    }
+  },
+  "steps": ["kek"]
+}

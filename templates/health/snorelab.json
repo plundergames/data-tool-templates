@@ -1,0 +1,193 @@
+{
+  "name": "SnoreLab",
+  "id": "3f6a45d1-ff7c-45ba-964e-207040ac42a9",
+  "appVersion": "0.1.0",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\"",
+        "hasCommaDecimals": false
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false,
+        "transpose": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": [],
+        "skimUnreadableChars": false
+      }
+    },
+    "sharedTransformationState": {
+      "transformationName": "SnoreLab",
+      "idAggregationConfig": [
+        {
+          "name": "Monitoring Start Time",
+          "typeConfig": {
+            "dateType": "date",
+            "type": "DATE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateFormat": "yyyy-MM-dd"
+          },
+          "aggregation": "AVG",
+          "fillIds": true
+        }
+      ],
+      "nameRegexes": [],
+      "groupedNames": [
+        {
+          "name": "Wake up time",
+          "items": ["End Time"]
+        }, {
+          "name": "Bed time",
+          "items": ["Start time"]
+        }, {
+          "name": "Snore monitoring time",
+          "items": ["Time Monitoring"]
+        }
+      ],
+      "newGroups": [],
+      "minimumRecords": 0,
+      "selectedTemplateId": "3f6a45d1-ff7c-45ba-964e-207040ac42a9",
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {
+        "End Time": {
+          "tags": [],
+          "typeConfig": {
+            "dateType": "time",
+            "type": "DATE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateFormat": ""
+          },
+          "name": "End Time",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false
+        },
+        "Factors": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Factors",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Notes": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Notes",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Remedies": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Remedies",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Time Monitoring": {
+          "tags": [],
+          "typeConfig": {
+            "dateType": "date",
+            "type": "TIME",
+            "timeType": "custom",
+            "timeFormat": "HH:mm:ss",
+            "dateFormat": ""
+          },
+          "name": "Time Monitoring",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false
+        },
+        "Time Snoring": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Time Snoring",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "custom",
+            "timeFormat": "HH:mm:ss",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Start time": {
+          "tags": [],
+          "typeConfig": {
+            "dateType": "time",
+            "type": "DATE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateFormat": ""
+          },
+          "name": "Start time",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false
+        }
+      },
+      "optionalTransformations": {},
+      "groupByConfig": [],
+      "conditionFilters": [],
+      "dedupeColumns": [],
+      "dedupeTakeLast": false,
+      "cutFirstRows": false,
+      "cutLastRows": false,
+      "splitValuesSeparators": [],
+      "transformationType": 2,
+      "idFormat": "ID::DATE",
+      "dateFormat": "yyyy-MM-dd",
+      "multipleDateFormats": {},
+      "useMultipleDateFormats": false,
+      "fillDateIds": false,
+      "groupColumns": [],
+      "idColumns": [],
+      "excludedGroups": [],
+      "includedGroups": []
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {},
+      "splitNamesSeparators": []
+    }
+  }
+}

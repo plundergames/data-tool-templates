@@ -1,0 +1,46 @@
+{
+  "name": "StayFree",
+  "id": "2b2c01ef-e24f-4739-b713-c85553b95361",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\"",
+        "hasCommaDecimals": false
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": 1,
+        "transpose": true
+      }
+    },
+    "sharedTransformationState": {
+      "transformationType": 2,
+      "transformationName": "StayFree",
+      "idFormat": "ID::DATE",
+      "dateFormat": "MMMM d, yyyy",
+      "multipleDateFormats": {},
+      "useMultipleDateFormats": false,
+      "nameRegexes": [],
+      "groupedNames": [],
+      "newGroups": [],
+      "minimumRecords": 0,
+      "fillDateIds": false,
+      "selectedTemplateId": "2b2c01ef-e24f-4739-b713-c85553b95361",
+      "splitValuesSeparators": [],
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {}
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {},
+      "splitNamesSeparators": []
+    },
+    "tableCsvState": {
+      "groupColumns": [],
+      "idColumns": [""],
+      "excludedGroups": [],
+      "includedGroups": []
+    }
+  }
+}
