@@ -1,0 +1,556 @@
+{
+  "name": "Oura",
+  "id": "77a3f45c-8635-4d3a-8d22-166b5b1a05b8",
+  "appVersion": "0.1.0",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\"",
+        "hasCommaDecimals": false
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false,
+        "transpose": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": [],
+        "skimUnreadableChars": false
+      }
+    },
+    "sharedTransformationState": {
+      "transformationName": "Oura",
+      "idAggregationConfig": [
+        {
+          "name": "date",
+          "typeConfig": {
+            "dateType": "date",
+            "type": "DATE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateFormat": ""
+          },
+          "aggregation": "AVG",
+          "fillIds": true
+        }
+      ],
+      "nameRegexes": [],
+      "groupedNames": [],
+      "newGroups": [
+        {
+          "name": "Sleep",
+          "items": [
+            {
+              "name": "Deep Sleep Duration",
+              "group": null
+            }, {
+              "name": "Light Sleep Duration",
+              "group": null
+            }, {
+              "name": "REM Sleep Duration",
+              "group": null
+            }, {
+              "name": "Restless Sleep",
+              "group": null
+            }, {
+              "name": "Sleep Latency",
+              "group": null
+            }, {
+              "name": "Sleep Timing",
+              "group": null
+            }, {
+              "name": "Total Sleep Duration",
+              "group": null
+            }, {
+              "name": "Bedtime End",
+              "group": null
+            }, {
+              "name": "Bedtime Start",
+              "group": null
+            }, {
+              "name": "Total Bedtime ",
+              "group": null
+            }, {
+              "name": "Awake Time",
+              "group": null
+            }, {
+              "name": "Sleep Efficiency",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Sleep scores",
+          "items": [
+            {
+              "name": "Deep Sleep Score",
+              "group": null
+            }, {
+              "name": "REM Sleep Score",
+              "group": null
+            }, {
+              "name": "REM Sleep Score",
+              "group": null
+            }, {
+              "name": "Sleep Latency Score",
+              "group": null
+            }, {
+              "name": "Total Sleep Score",
+              "group": null
+            }, {
+              "name": "Sleep Balance Score",
+              "group": null
+            }, {
+              "name": "Sleep Score",
+              "group": null
+            }, {
+              "name": "Sleep Timin Score",
+              "group": null
+            }, {
+              "name": "Previous Night Score",
+              "group": null
+            }, {
+              "name": "Sleep Efficiency Score",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Activity scores",
+          "items": [
+            {
+              "name": "Activity Balance Score",
+              "group": null
+            }, {
+              "name": "Activity Score",
+              "group": null
+            }, {
+              "name": "Move Every Hour Score",
+              "group": null
+            }, {
+              "name": "Meet Daily Targets Score",
+              "group": null
+            }, {
+              "name": "Previous Day Activity Score",
+              "group": null
+            }, {
+              "name": "Stay Active Score",
+              "group": null
+            }, {
+              "name": "Training Volume Score",
+              "group": null
+            }, {
+              "name": "Training Frequency Score",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Rest",
+          "items": [
+            {
+              "name": "Average HRV",
+              "group": null
+            }, {
+              "name": "Average Resting Heart Rate",
+              "group": null
+            }, {
+              "name": "HRV Balance Score",
+              "group": null
+            }, {
+              "name": "Lowest Resting Heart Rate",
+              "group": null
+            }, {
+              "name": "Respiratory Rate",
+              "group": null
+            }, {
+              "name": "Rest Time",
+              "group": null
+            }, {
+              "name": "Temperature Deviation (°C)",
+              "group": null
+            }, {
+              "name": "Temperature Trend Deviation",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Rest scores",
+          "items": [
+            {
+              "name": "Readiness Score",
+              "group": null
+            }, {
+              "name": "Restfulness Score",
+              "group": null
+            }, {
+              "name": "Recovery Index Score",
+              "group": null
+            }, {
+              "name": "Resting Heart Rate Score",
+              "group": null
+            }, {
+              "name": "Temperature Score",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Activity",
+          "items": [
+            {
+              "name": "Activity Burn",
+              "group": null
+            }, {
+              "name": "High Activity Time",
+              "group": null
+            }, {
+              "name": "Long Periods of Inactivity",
+              "group": null
+            }, {
+              "name": "Low Activity Time",
+              "group": null
+            }, {
+              "name": "Medium Activity Time",
+              "group": null
+            }, {
+              "name": "Average MET",
+              "group": null
+            }, {
+              "name": "Inactive Time",
+              "group": null
+            }, {
+              "name": "Equivalent Walking Distance",
+              "group": null
+            }, {
+              "name": "Total Burn",
+              "group": null
+            }, {
+              "name": "Steps",
+              "group": null
+            }
+          ]
+        }
+      ],
+      "minimumRecords": 0,
+      "selectedTemplateId": "77a3f45c-8635-4d3a-8d22-166b5b1a05b8",
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {
+        "Non-wear Time": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Non-wear Time",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "High Activity Time": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "High Activity Time",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Inactive Time": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Inactive Time",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Low Activity Time": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Low Activity Time",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Medium Activity Time": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Medium Activity Time",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Previous Day Activity Score": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Previous Day Activity Score",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Rest Time": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Rest Time",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Awake Time": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Awake Time",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Bedtime End": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Bedtime End",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "timeIsRelative": true,
+          "typeConfig": {
+            "type": "DATE",
+            "timeType": "custom",
+            "timeFormat": "",
+            "dateType": "time",
+            "dateFormat": ""
+          }
+        },
+        "Bedtime Start": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Bedtime Start",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "timeIsRelative": true,
+          "typeConfig": {
+            "type": "DATE",
+            "timeType": "custom",
+            "timeFormat": "",
+            "dateType": "time",
+            "dateFormat": ""
+          }
+        },
+        "Deep Sleep Duration": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Deep Sleep Duration",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Light Sleep Duration": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Light Sleep Duration",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "REM Sleep Duration": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "REM Sleep Duration",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Sleep Timing": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Sleep Timing",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Total Bedtime ": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Total Bedtime ",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Total Sleep Duration": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Total Sleep Duration",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Previous Night Score": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Previous Night Score",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        }
+      },
+      "optionalTransformations": {
+        "createGroups": true
+      },
+      "groupByConfig": [],
+      "conditionFilters": [],
+      "dedupeColumns": [],
+      "dedupeTakeLast": false,
+      "cutFirstRows": false,
+      "cutLastRows": false,
+      "splitValuesSeparators": [],
+      "transformationType": 2,
+      "idFormat": "ID::DATE",
+      "dateFormat": "",
+      "multipleDateFormats": {},
+      "useMultipleDateFormats": false,
+      "fillDateIds": false,
+      "groupColumns": [],
+      "idColumns": [],
+      "excludedGroups": [],
+      "includedGroups": []
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {},
+      "splitNamesSeparators": []
+    }
+  }
+}

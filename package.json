@@ -1,0 +1,11 @@
+{
+  "name": "data-tool-templates",
+  "version": "1.0.0",
+  "description": "Default templates for the correlation data tool",
+  "main": "build.js",
+  "type": "module",
+  "scripts": {
+    "build": "node ."
+  },
+  "author": ""
+}

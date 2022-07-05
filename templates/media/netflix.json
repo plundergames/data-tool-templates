@@ -1,0 +1,203 @@
+{
+  "name": "Netflix",
+  "id": "2a12119c-1695-4822-b6de-f1ef9ef6fe05",
+  "appVersion": "0.1.0",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\"",
+        "hasCommaDecimals": false
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false,
+        "transpose": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": [],
+        "skimUnreadableChars": false
+      }
+    },
+    "sharedTransformationState": {
+      "transformationName": "Netflix",
+      "idAggregationConfig": [
+        {
+          "name": "Timestamp",
+          "typeConfig": {
+            "dateType": "date",
+            "type": "DATE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateFormat": "MMM dd yyyy"
+          },
+          "aggregation": "AVG",
+          "fillIds": true
+        }
+      ],
+      "nameRegexes": [],
+      "groupedNames": [],
+      "newGroups": [],
+      "minimumRecords": 0,
+      "selectedTemplateId": "2a12119c-1695-4822-b6de-f1ef9ef6fe05",
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {
+        "Country": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Country",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Device Type": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Device Type",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Duration": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Duration",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Duration (s)": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Duration (s)",
+          "group": "No group",
+          "aggregation": ["AVG", "SUM"],
+          "ignore": false,
+          "typeConfig": {
+            "type": "TIME_DEFAULT",
+            "timeType": "s",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Movie ID": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Movie ID",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Title": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Title",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Top Node ID": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": [],
+          "name": "Top Node ID",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        },
+        "Type": {
+          "dateType": "date",
+          "dateFormat": "",
+          "subTags": [],
+          "tags": ["Movie", "Serie"],
+          "name": "Type",
+          "group": "No group",
+          "aggregation": "AVG",
+          "ignore": false,
+          "typeConfig": {
+            "type": "TAG",
+            "timeType": "ms",
+            "timeFormat": "",
+            "dateType": "date",
+            "dateFormat": ""
+          }
+        }
+      },
+      "optionalTransformations": {},
+      "groupByConfig": [],
+      "splitValuesSeparators": [],
+      "transformationType": 2,
+      "idFormat": "ID::DATE",
+      "dateFormat": "MMM dd yyyy",
+      "multipleDateFormats": {},
+      "useMultipleDateFormats": false,
+      "fillDateIds": true,
+      "groupColumns": [],
+      "idColumns": [],
+      "excludedGroups": [],
+      "includedGroups": []
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {},
+      "splitNamesSeparators": []
+    }
+  }
+}
