@@ -47,8 +47,8 @@ async function getPreviews(category) {
   return Promise.all(templateProms);
 }
 
-const result = await Promise.all(
+const result = (await Promise.all(
   categories.map(category => getPreviews(category))
-)
+)).flat();
 
 await writeFile(allTemplatesFile, JSON.stringify(result));
