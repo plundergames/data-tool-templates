@@ -1,36 +1,37 @@
 {
+  "steps": [
+    "Open the SnoreLab app and go to profile.",
+    "Click Export data and then again to confirm. Choose where you want to send the export.",
+    "From the two exported csv files, select the one that starts with \"Export Data\" and load it into Dataflexor."
+  ],
   "name": "SnoreLab",
-  "id": "3f6a45d1-ff7c-45ba-964e-207040ac42a9",
-  "appVersion": "0.1.0",
+  "id": "c92db077-9d29-415f-818a-847de023570e",
+  "appVersion": "0.1.1",
   "state": {
     "sourceState": {
       "csvFileConfig": {
         "header": true,
-        "quoteChar": "\"",
-        "hasCommaDecimals": false
+        "quoteChar": "\""
       },
       "tableConfig": {
         "skipFirst": false,
-        "skipLast": false,
-        "transpose": false
+        "skipLast": false
       },
       "valueFormatConfig": {
         "hasCommaDecimals": false,
-        "splitValuesSeparators": [],
-        "skimUnreadableChars": false
+        "splitValuesSeparators": [","]
       }
     },
     "sharedTransformationState": {
-      "transformationName": "SnoreLab",
       "idAggregationConfig": [
         {
-          "name": "Monitoring Start Time",
+          "name": "Date",
           "typeConfig": {
-            "dateType": "date",
             "type": "DATE",
-            "timeType": "ms",
             "timeFormat": "",
-            "dateFormat": "yyyy-MM-dd"
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "custom"
           },
           "aggregation": "AVG",
           "fillIds": true
@@ -39,150 +40,173 @@
       "nameRegexes": [],
       "groupedNames": [
         {
-          "name": "Wake up time",
-          "items": ["End Time"]
-        }, {
-          "name": "Bed time",
-          "items": ["Start time"]
-        }, {
-          "name": "Snore monitoring time",
-          "items": ["Time Monitoring"]
+          "name": "Date",
+          "items": ["End Time"],
+          "keepOriginal": true
         }
       ],
-      "newGroups": [],
+      "newGroups": [
+        {
+          "name": "Duration",
+          "items": [
+            {
+              "name": "End Time",
+              "group": null
+            }, {
+              "name": "Monitoring Start Time",
+              "group": null
+            }, {
+              "name": "Start time",
+              "group": null
+            }, {
+              "name": "Time Monitoring",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Snoring",
+          "items": [
+            {
+              "name": "Epic Snoring Percentage",
+              "group": null
+            }, {
+              "name": "Loud Snoring Percentage",
+              "group": null
+            }, {
+              "name": "Mild Snoring Percentage",
+              "group": null
+            }, {
+              "name": "Snore Score",
+              "group": null
+            }, {
+              "name": "Snoring Percentage",
+              "group": null
+            }, {
+              "name": "Time Snoring",
+              "group": null
+            }, {
+              "name": "Volume",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "",
+          "items": [
+            {
+              "name": "Factors",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "",
+          "items": [
+            {
+              "name": "Remedies",
+              "group": null
+            }
+          ]
+        }
+      ],
       "minimumRecords": 0,
-      "selectedTemplateId": "3f6a45d1-ff7c-45ba-964e-207040ac42a9",
       "aggregationConfigBy": "name",
       "aggregationConfig": {
-        "End Time": {
-          "tags": [],
-          "typeConfig": {
-            "dateType": "time",
-            "type": "DATE",
-            "timeType": "ms",
-            "timeFormat": "",
-            "dateFormat": ""
-          },
-          "name": "End Time",
-          "group": "No group",
-          "aggregation": "AVG",
-          "ignore": false
-        },
-        "Factors": {
-          "dateType": "date",
-          "dateFormat": "",
-          "subTags": [],
-          "tags": [],
-          "name": "Factors",
-          "group": "No group",
-          "aggregation": "AVG",
-          "ignore": true,
-          "typeConfig": {
-            "type": "VALUE",
-            "timeType": "ms",
-            "timeFormat": "",
-            "dateType": "date",
-            "dateFormat": ""
-          }
-        },
         "Notes": {
-          "dateType": "date",
-          "dateFormat": "",
-          "subTags": [],
-          "tags": [],
           "name": "Notes",
           "group": "No group",
-          "aggregation": "AVG",
-          "ignore": true,
           "typeConfig": {
             "type": "VALUE",
-            "timeType": "ms",
             "timeFormat": "",
+            "dateFormat": "",
             "dateType": "date",
-            "dateFormat": ""
-          }
-        },
-        "Remedies": {
-          "dateType": "date",
-          "dateFormat": "",
-          "subTags": [],
-          "tags": [],
-          "name": "Remedies",
-          "group": "No group",
-          "aggregation": "AVG",
-          "ignore": true,
-          "typeConfig": {
-            "type": "VALUE",
-            "timeType": "ms",
-            "timeFormat": "",
-            "dateType": "date",
-            "dateFormat": ""
-          }
-        },
-        "Time Monitoring": {
-          "tags": [],
-          "typeConfig": {
-            "dateType": "date",
-            "type": "TIME",
-            "timeType": "custom",
-            "timeFormat": "HH:mm:ss",
-            "dateFormat": ""
+            "timeType": "ms"
           },
-          "name": "Time Monitoring",
-          "group": "No group",
           "aggregation": "AVG",
-          "ignore": false
+          "ignore": true,
+          "tags": null
         },
-        "Time Snoring": {
-          "dateType": "date",
-          "dateFormat": "",
-          "subTags": [],
-          "tags": [],
-          "name": "Time Snoring",
+        "End Time": {
+          "name": "End Time",
           "group": "No group",
+          "typeConfig": {
+            "type": "DATE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "time",
+            "timeType": "custom"
+          },
           "aggregation": "AVG",
           "ignore": false,
+          "tags": null
+        },
+        "Monitoring Start Time": {
+          "name": "Monitoring Start Time",
+          "group": "No group",
           "typeConfig": {
-            "type": "TIME",
-            "timeType": "custom",
-            "timeFormat": "HH:mm:ss",
-            "dateType": "date",
-            "dateFormat": ""
-          }
+            "type": "DATE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "time",
+            "timeType": "custom"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": null
         },
         "Start time": {
-          "tags": [],
-          "typeConfig": {
-            "dateType": "time",
-            "type": "DATE",
-            "timeType": "ms",
-            "timeFormat": "",
-            "dateFormat": ""
-          },
           "name": "Start time",
           "group": "No group",
+          "typeConfig": {
+            "type": "DATE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "time",
+            "timeType": "custom"
+          },
           "aggregation": "AVG",
-          "ignore": false
+          "ignore": false,
+          "tags": null
+        },
+        "Factors": {
+          "name": "Factors",
+          "group": "Factors",
+          "typeConfig": {
+            "type": "TAG",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": null
+        },
+        "Remedies": {
+          "name": "Remedies",
+          "group": "Remedies",
+          "typeConfig": {
+            "type": "TAG",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": null
         }
       },
-      "optionalTransformations": {},
+      "optionalTransformations": {
+        "mergeFields": true,
+        "createGroups": true
+      },
       "groupByConfig": [],
       "conditionFilters": [],
       "dedupeColumns": [],
       "dedupeTakeLast": false,
       "cutFirstRows": false,
       "cutLastRows": false,
-      "splitValuesSeparators": [],
-      "transformationType": 2,
-      "idFormat": "ID::DATE",
-      "dateFormat": "yyyy-MM-dd",
-      "multipleDateFormats": {},
-      "useMultipleDateFormats": false,
-      "fillDateIds": false,
-      "groupColumns": [],
-      "idColumns": [],
-      "excludedGroups": [],
-      "includedGroups": []
+      "openSections": {},
+      "transposeHeader": 1
     },
     "logCsvState": {
       "groupsWithoutName": [],
