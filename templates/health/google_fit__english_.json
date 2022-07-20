@@ -1,0 +1,252 @@
+{
+  "steps": [
+    "Go to Google Takeout (https://takeout.google.com/) to export your Google data. The preferred language in your Google account has to be set to English, else the template will not work perfectly.",
+    "Under data to include select \"Fit\".",
+    "Go through the export process and unzip your data.",
+    "In the unzipped folder go to Takeout > Fit > Daily activity metrics > Daily activity metrics.csv",
+    "In Dataflexor select the file from the last step."
+  ],
+  "name": "Google Fit (English)",
+  "id": "a677ef10-1361-4711-8fb8-afd5f7806995",
+  "appVersion": "0.1.1",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\""
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": []
+      }
+    },
+    "sharedTransformationState": {
+      "idAggregationConfig": [
+        {
+          "name": "Date",
+          "fillIds": true,
+          "typeConfig": {
+            "dateFormat": "yyyy-MM-dd"
+          }
+        }
+      ],
+      "nameRegexes": [],
+      "groupedNames": [],
+      "newGroups": [
+        {
+          "name": "Blood pressure",
+          "items": [
+            {
+              "name": "Average diastolic blood pressure (mmHg)",
+              "group": null
+            }, {
+              "name": "Average systolic blood pressure (mmHg)",
+              "group": null
+            }, {
+              "name": "Blood pressure measurement location",
+              "group": null
+            }, {
+              "name": "Max diastolic blood pressure (mmHg)",
+              "group": null
+            }, {
+              "name": "Max systolic blood pressure (mmHg)",
+              "group": null
+            }, {
+              "name": "Min diastolic blood pressure (mmHg)",
+              "group": null
+            }, {
+              "name": "Min systolic blood pressure (mmHg)",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Heart rate",
+          "items": [
+            {
+              "name": "Average heart rate (bpm)",
+              "group": null
+            }, {
+              "name": "Max heart rate (bpm)",
+              "group": null
+            }, {
+              "name": "Min heart rate (bpm)",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Activity",
+          "items": [
+            {
+              "name": "Inactive duration (ms)",
+              "group": null
+            }, {
+              "name": "Average speed (m/s)",
+              "group": null
+            }, {
+              "name": "Biking duration (ms)",
+              "group": null
+            }, {
+              "name": "Distance (m)",
+              "group": null
+            }, {
+              "name": "Heart Minutes",
+              "group": null
+            }, {
+              "name": "Heart Points",
+              "group": null
+            }, {
+              "name": "Max speed (m/s)",
+              "group": null
+            }, {
+              "name": "Min speed (m/s)",
+              "group": null
+            }, {
+              "name": "Move Minutes count",
+              "group": null
+            }, {
+              "name": "Running duration (ms)",
+              "group": null
+            }, {
+              "name": "Step count",
+              "group": null
+            }, {
+              "name": "Walking duration (ms)",
+              "group": null
+            }, {
+              "name": "Calories (kcal)",
+              "group": null
+            }, {
+              "name": "Body position",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Location",
+          "items": [
+            {
+              "name": "High latitude (deg)",
+              "group": null
+            }, {
+              "name": "High longitude (deg)",
+              "group": null
+            }, {
+              "name": "Low latitude (deg)",
+              "group": null
+            }, {
+              "name": "Low longitude (deg)",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Weight",
+          "items": [
+            {
+              "name": "Average weight (kg)",
+              "group": null
+            }, {
+              "name": "Max weight (kg)",
+              "group": null
+            }, {
+              "name": "Min weight (kg)",
+              "group": null
+            }
+          ]
+        }
+      ],
+      "minimumRecords": 10,
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {
+        "Biking duration (ms)": {
+          "name": "Biking duration (ms)",
+          "group": "No group",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Inactive duration (ms)": {
+          "name": "Inactive duration (ms)",
+          "group": "No group",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Move Minutes count": {
+          "name": "Move Minutes count",
+          "group": "No group",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "m"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Running duration (ms)": {
+          "name": "Running duration (ms)",
+          "group": "No group",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Walking duration (ms)": {
+          "name": "Walking duration (ms)",
+          "group": "No group",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        }
+      },
+      "optionalTransformations": {
+        "createGroups": true
+      },
+      "groupByConfig": [],
+      "conditionFilters": [],
+      "dedupeColumns": [],
+      "dedupeTakeLast": false,
+      "cutFirstRows": false,
+      "cutLastRows": false,
+      "openSections": {},
+      "transposeHeader": 1
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {},
+      "splitNamesSeparators": []
+    }
+  }
+}

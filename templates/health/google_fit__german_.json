@@ -1,0 +1,396 @@
+{
+  "steps": [
+    "Go to Google Takeout (https://takeout.google.com/) to export your Google data. The preferred language in your Google account has to be set to German, else the template will not work perfectly.",
+    "Under data to include select \"Fit\".", "Go through the export process and unzip your data.",
+    "In the unzipped folder go to Takeout > Fit > Tägliche Aktivitätswerte > Tägliche Aktivitätswerte.csv",
+    "In Dataflexor select the file from the last step."
+  ],
+  "name": "Google Fit (German)",
+  "id": "87df3d49-a91c-4544-8209-6004865a364a",
+  "appVersion": "0.1.1",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\""
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": []
+      }
+    },
+    "sharedTransformationState": {
+      "idAggregationConfig": [
+        {
+          "name": "Datum",
+          "typeConfig": {
+            "type": "DATE",
+            "timeFormat": "yyyy-MM-dd",
+            "dateFormat": "yyyy-MM-dd",
+            "dateType": "date",
+            "timeType": "custom"
+          },
+          "aggregation": "AVG",
+          "fillIds": false
+        }
+      ],
+      "nameRegexes": [],
+      "groupedNames": [],
+      "newGroups": [
+        {
+          "name": "Blutdruck",
+          "items": [
+            {
+              "name": "Durchschnittlicher diastolischer Blutdruck (mmHg)",
+              "group": null
+            }, {
+              "name": "Durchschnittlicher systolischer Blutdruck (mmHg)",
+              "group": null
+            }, {
+              "name": "Körperstelle zur Messung des Blutdrucks",
+              "group": null
+            }, {
+              "name": "Max. systolischer Blutdruck (mmHg)",
+              "group": null
+            }, {
+              "name": "Max. diastolischer Blutdruck (mmHg)",
+              "group": null
+            }, {
+              "name": "Min. diastolischer Blutdruck (mmHg)",
+              "group": null
+            }, {
+              "name": "Min. systolischer Blutdruck (mmHg)",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Herzfrequenz",
+          "items": [
+            {
+              "name": "Durchschnittliche Herzfrequenz (bpm)",
+              "group": null
+            }, {
+              "name": "Maximale Herzfrequenz (bpm)",
+              "group": null
+            }, {
+              "name": "Minimale Herzfrequenz (bpm)",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Aktivität",
+          "items": [
+            {
+              "name": "Anzahl der Aktivitätsminuten",
+              "group": null
+            }, {
+              "name": "Inaktiv – Dauer (ms)",
+              "group": null
+            }, {
+              "name": "Durchschnittsgeschwindigkeit (m/s)",
+              "group": null
+            }, {
+              "name": "Gehen – Dauer (ms)",
+              "group": null
+            }, {
+              "name": "Kalorien (kcal)",
+              "group": null
+            }, {
+              "name": "Kardiopunkte",
+              "group": null
+            }, {
+              "name": "Kardiominuten",
+              "group": null
+            }, {
+              "name": "Körperlage",
+              "group": null
+            }, {
+              "name": "Laufen – Dauer (ms)",
+              "group": null
+            }, {
+              "name": "Radfahren – Dauer (ms)",
+              "group": null
+            }, {
+              "name": "Schrittzahl",
+              "group": null
+            }, {
+              "name": "Distanz (m)",
+              "group": null
+            }, {
+              "name": "Maximale Geschwindigkeit (m/s)",
+              "group": null
+            }, {
+              "name": "Minimale Geschwindigkeit (m/s)",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Ort",
+          "items": [
+            {
+              "name": "Minimaler Breitengrad (Grad)",
+              "group": null
+            }, {
+              "name": "Maximaler Breitengrad (Grad)",
+              "group": null
+            }, {
+              "name": "Maximaler Längengrad (Grad)",
+              "group": null
+            }, {
+              "name": "Minimaler Längengrad (Grad)",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Gewicht",
+          "items": [
+            {
+              "name": "Durchschnittsgewicht (kg)",
+              "group": null
+            }, {
+              "name": "Maximales Gewicht (kg)",
+              "group": null
+            }, {
+              "name": "Minimales Gewicht (kg)",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "Schlaf",
+          "items": [
+            {
+              "name": "Leichter Schlaf – Dauer (ms)",
+              "group": null
+            }, {
+              "name": "Tiefer Schlaf – Dauer (ms)",
+              "group": null
+            }, {
+              "name": "Wachphase beim Schlafen – Dauer (ms)",
+              "group": null
+            }
+          ]
+        }
+      ],
+      "minimumRecords": 10,
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {
+        "Biking duration (ms)": {
+          "name": "Biking duration (ms)",
+          "group": "No group",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Inactive duration (ms)": {
+          "name": "Inactive duration (ms)",
+          "group": "No group",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Move Minutes count": {
+          "name": "Move Minutes count",
+          "group": "No group",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "m"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Running duration (ms)": {
+          "name": "Running duration (ms)",
+          "group": "No group",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Walking duration (ms)": {
+          "name": "Walking duration (ms)",
+          "group": "No group",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Wachphase beim Schlafen – Dauer (ms)": {
+          "name": "Wachphase beim Schlafen – Dauer (ms)",
+          "group": "Schlaf",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Tiefer Schlaf – Dauer (ms)": {
+          "name": "Tiefer Schlaf – Dauer (ms)",
+          "group": "Schlaf",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Leichter Schlaf – Dauer (ms)": {
+          "name": "Leichter Schlaf – Dauer (ms)",
+          "group": "Schlaf",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Radfahren – Dauer (ms)": {
+          "name": "Radfahren – Dauer (ms)",
+          "group": "Aktivität",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Laufen – Dauer (ms)": {
+          "name": "Laufen – Dauer (ms)",
+          "group": "Aktivität",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Kardiominuten": {
+          "name": "Kardiominuten",
+          "group": "Aktivität",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "m"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Inaktiv – Dauer (ms)": {
+          "name": "Inaktiv – Dauer (ms)",
+          "group": "Aktivität",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Gehen – Dauer (ms)": {
+          "name": "Gehen – Dauer (ms)",
+          "group": "Aktivität",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        },
+        "Anzahl der Aktivitätsminuten": {
+          "name": "Anzahl der Aktivitätsminuten",
+          "group": "Aktivität",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "m"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
+        }
+      },
+      "optionalTransformations": {
+        "createGroups": true
+      },
+      "groupByConfig": [],
+      "conditionFilters": [],
+      "dedupeColumns": [],
+      "dedupeTakeLast": false,
+      "cutFirstRows": false,
+      "cutLastRows": false,
+      "openSections": {},
+      "transposeHeader": 1
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {},
+      "splitNamesSeparators": []
+    }
+  }
+}

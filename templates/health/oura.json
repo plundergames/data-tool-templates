@@ -1,7 +1,12 @@
 {
+  "steps": [
+    "Go to the Oura web-app (https://cloud.ouraring.com/) and select the Trends-tab.",
+    "Select the maximum timespan. Click \"Download data\", then select all. Click download.",
+    "The downloaded file you can select in Dataflexor."
+  ],
   "name": "Oura",
-  "id": "77a3f45c-8635-4d3a-8d22-166b5b1a05b8",
-  "appVersion": "0.1.0",
+  "id": "e5ddbebc-19ea-46e0-849b-4dbc54395e33",
+  "appVersion": "0.1.1",
   "state": {
     "sourceState": {
       "csvFileConfig": {
@@ -21,7 +26,6 @@
       }
     },
     "sharedTransformationState": {
-      "transformationName": "Oura",
       "idAggregationConfig": [
         {
           "name": "date",
@@ -231,7 +235,6 @@
         }
       ],
       "minimumRecords": 0,
-      "selectedTemplateId": "77a3f45c-8635-4d3a-8d22-166b5b1a05b8",
       "aggregationConfigBy": "name",
       "aggregationConfig": {
         "Non-wear Time": {
@@ -242,9 +245,9 @@
           "name": "Non-wear Time",
           "group": "No group",
           "aggregation": "AVG",
-          "ignore": true,
+          "ignore": false,
           "typeConfig": {
-            "type": "VALUE",
+            "type": "TIME",
             "timeType": "ms",
             "timeFormat": "",
             "dateType": "date",
@@ -327,7 +330,7 @@
           "name": "Previous Day Activity Score",
           "group": "No group",
           "aggregation": "AVG",
-          "ignore": true,
+          "ignore": false,
           "typeConfig": {
             "type": "VALUE",
             "timeType": "ms",
@@ -335,6 +338,20 @@
             "dateType": "date",
             "dateFormat": ""
           }
+        },
+        "HRV Balance Score": {
+          "name": "HRV Balance Score",
+          "group": "Rest",
+          "typeConfig": {
+            "type": "VALUE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
         },
         "Rest Time": {
           "dateType": "date",
@@ -352,6 +369,20 @@
             "dateType": "date",
             "dateFormat": ""
           }
+        },
+        "Temperature Trend Deviation": {
+          "name": "Temperature Trend Deviation",
+          "group": "Rest",
+          "typeConfig": {
+            "type": "VALUE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
         },
         "Awake Time": {
           "dateType": "date",
@@ -516,7 +547,7 @@
           "name": "Previous Night Score",
           "group": "No group",
           "aggregation": "AVG",
-          "ignore": true,
+          "ignore": false,
           "typeConfig": {
             "type": "VALUE",
             "timeType": "ms",
@@ -524,6 +555,20 @@
             "dateType": "date",
             "dateFormat": ""
           }
+        },
+        "Sleep Balance Score": {
+          "name": "Sleep Balance Score",
+          "group": "Sleep scores",
+          "typeConfig": {
+            "type": "VALUE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": []
         }
       },
       "optionalTransformations": {
@@ -535,6 +580,10 @@
       "dedupeTakeLast": false,
       "cutFirstRows": false,
       "cutLastRows": false,
+      "openSections": {},
+      "transposeHeader": 1,
+      "transformationName": "Oura",
+      "selectedTemplateId": "77a3f45c-8635-4d3a-8d22-166b5b1a05b8",
       "splitValuesSeparators": [],
       "transformationType": 2,
       "idFormat": "ID::DATE",
