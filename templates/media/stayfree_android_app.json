@@ -1,0 +1,76 @@
+{
+  "steps": [
+    "Open the StayFree Android App and open the menu.",
+    "Click Export to CSV, check that Total Usage is selected and the whole day range. Then click Export.",
+    "The exported file is a XLS (not a CSV like expected), so you have to convert it to a CSV file first (in Google sheets or excel).",
+    "The resulting Csv you can load in Dataflexor."
+  ],
+  "name": "StayFree Android App",
+  "id": "028e904b-a3c3-4e30-b385-848f82ac25df",
+  "appVersion": "0.1.1",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\""
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": []
+      }
+    },
+    "sharedTransformationState": {
+      "idAggregationConfig": [
+        {
+          "name": "Row ID",
+          "fillIds": true,
+          "typeConfig": {
+            "dateFormat": ""
+          }
+        }
+      ],
+      "nameRegexes": [],
+      "groupedNames": [],
+      "newGroups": [],
+      "minimumRecords": 10,
+      "aggregationConfigBy": "group",
+      "aggregationConfig": {
+        "": {
+          "name": "Android Auto, Android-System, AppGallery, AppLock, Audiobook Player for Spotify, Authenticator, Brave, Breathe, Bumble, Calm, Chrome, DAB SecurePlus, Dateien, Discord, Docs, Drive, Duo, Einstellungen, Elite HRV, Flynn, FoodMarble, Fotos, Gboard, Gerätehilfe, Gmail, Google, Google Pay, Google Play Musik, Google Play Spiele, Google Play Store, Google Play-Dienste, Google Podcasts, Google TV, Govee Home, HMS Core, Hangouts, Headspace, Hintergründe, Home, JOYCE, Kalender, Kamera, Keepass2Android, Kontakte, Lime, Maps, Mealime, Messages, Mindroid, Moto, Moto Action und Gesten, Moto App Launcher, Moto Sprache für Alexa, Motorola-Benachrichtigungen, MyApp, N26, OneDrive, Outlook, PAYBACK, Paket-Installer, Paladin's Story, PayPal, Präsentationen, Radio, Rechner, Reddit, S2GS, Sleep Sounds, SnoreLab, Speech Services by Google, Spotify, StayFree, System-UI, Tabellen, Telefon, Termux, Total Usage, UPRIGHT, Uhr, Vorschläge für die Einstellungen, Web Video Caster, WhatsApp, YouTube, com.uprightpose.upright_go, comdirect, lexoffice scan, luca, photoTAN, Übersetzer",
+          "typeConfig": {
+            "type": "TIME",
+            "timeFormat": "H'h' m'm' s's'",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "custom"
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": null
+        }
+      },
+      "optionalTransformations": {
+        "transpose": true,
+        "cutRecords": true,
+        "createGroups": false
+      },
+      "groupByConfig": [],
+      "conditionFilters": [],
+      "dedupeColumns": [],
+      "dedupeTakeLast": false,
+      "cutFirstRows": false,
+      "cutLastRows": 1,
+      "openSections": {},
+      "transposeHeader": 1
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {},
+      "splitNamesSeparators": []
+    }
+  }
+}

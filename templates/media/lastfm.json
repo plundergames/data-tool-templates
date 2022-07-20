@@ -1,1 +1,131 @@
-{"steps":["To export the LastFM data as CSV we use a 3rd party tool (https://benjaminbenben.com/lastfm-to-csv/). You can also use a different tool, but then the template won't work.","Use the resulting CSV file to load into Dataflexor."],"name":"LastFM","id":"a47e6584-25aa-41ce-aeea-c53d4f8a9fb8","appVersion":"0.1.1","state":{"sourceState":{"csvFileConfig":{"header":false,"quoteChar":"\""},"tableConfig":{"skipFirst":false,"skipLast":false},"valueFormatConfig":{"hasCommaDecimals":false,"splitValuesSeparators":[]}},"sharedTransformationState":{"idAggregationConfig":[{"name":"field 4","fillIds":true,"typeConfig":{"dateFormat":"dd MMM yyyy"}}],"nameRegexes":[],"groupedNames":[{"name":"Time","items":["field 4"],"keepOriginal":true},{"name":"Unique Artists","items":["field 1"]},{"name":"Unique Albums","items":["field 2"]},{"name":"Title","items":["field 3"]}],"newGroups":[],"minimumRecords":0,"aggregationConfigBy":"name","aggregationConfig":{"Time":{"name":"Time","group":"No group","typeConfig":{"type":"DATE","timeFormat":"","dateFormat":"","dateType":"time","timeType":"custom"},"aggregation":["MEDIAN","MIN","MAX"],"ignore":false,"tags":null},"Title":{"name":"Title","group":"No group","typeConfig":{"type":"VALUE","timeFormat":"","dateFormat":"","dateType":"date","timeType":"ms"},"aggregation":["COUNT","COUNT UNIQUE"],"ignore":false,"tags":null},"Unique Albums":{"name":"Unique Albums","group":"No group","typeConfig":{"type":"VALUE","timeFormat":"","dateFormat":"","dateType":"date","timeType":"ms"},"aggregation":"COUNT UNIQUE","ignore":false,"tags":null},"Unique Artists":{"name":"Unique Artists","group":"No group","typeConfig":{"type":"VALUE","timeFormat":"","dateFormat":"","dateType":"date","timeType":"ms"},"aggregation":"COUNT UNIQUE","ignore":false,"tags":null}},"optionalTransformations":{"mergeFields":true,"createGroups":false},"groupByConfig":[],"conditionFilters":[],"dedupeColumns":[],"dedupeTakeLast":false,"cutFirstRows":false,"cutLastRows":false,"openSections":{},"transposeHeader":1},"logCsvState":{"groupsWithoutName":[],"csvConfig":{},"splitNamesSeparators":[]}}}
+{
+  "steps": [
+    "To export the LastFM data as CSV we use a 3rd party tool (https://benjaminbenben.com/lastfm-to-csv/). You can also use a different tool, but then the template won't work.",
+    "Use the resulting CSV file to load into Dataflexor."
+  ],
+  "name": "LastFM",
+  "id": "a47e6584-25aa-41ce-aeea-c53d4f8a9fb8",
+  "appVersion": "0.1.1",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": false,
+        "quoteChar": "\""
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": []
+      }
+    },
+    "sharedTransformationState": {
+      "idAggregationConfig": [
+        {
+          "name": "field 4",
+          "fillIds": true,
+          "typeConfig": {
+            "dateFormat": "dd MMM yyyy"
+          }
+        }
+      ],
+      "nameRegexes": [],
+      "groupedNames": [
+        {
+          "name": "Time",
+          "items": ["field 4"],
+          "keepOriginal": true
+        }, {
+          "name": "Unique Artists",
+          "items": ["field 1"]
+        }, {
+          "name": "Unique Albums",
+          "items": ["field 2"]
+        }, {
+          "name": "Title",
+          "items": ["field 3"]
+        }
+      ],
+      "newGroups": [],
+      "minimumRecords": 0,
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {
+        "Time": {
+          "name": "Time",
+          "group": "No group",
+          "typeConfig": {
+            "type": "DATE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "time",
+            "timeType": "custom"
+          },
+          "aggregation": ["MEDIAN", "MIN", "MAX"],
+          "ignore": false,
+          "tags": null
+        },
+        "Title": {
+          "name": "Title",
+          "group": "No group",
+          "typeConfig": {
+            "type": "VALUE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": ["COUNT", "COUNT UNIQUE"],
+          "ignore": false,
+          "tags": null
+        },
+        "Unique Albums": {
+          "name": "Unique Albums",
+          "group": "No group",
+          "typeConfig": {
+            "type": "VALUE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "COUNT UNIQUE",
+          "ignore": false,
+          "tags": null
+        },
+        "Unique Artists": {
+          "name": "Unique Artists",
+          "group": "No group",
+          "typeConfig": {
+            "type": "VALUE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms"
+          },
+          "aggregation": "COUNT UNIQUE",
+          "ignore": false,
+          "tags": null
+        }
+      },
+      "optionalTransformations": {
+        "mergeFields": true,
+        "createGroups": false
+      },
+      "groupByConfig": [],
+      "conditionFilters": [],
+      "dedupeColumns": [],
+      "dedupeTakeLast": false,
+      "cutFirstRows": false,
+      "cutLastRows": false,
+      "openSections": {},
+      "transposeHeader": 1
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {},
+      "splitNamesSeparators": []
+    }
+  }
+}
