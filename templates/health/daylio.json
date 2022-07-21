@@ -1,0 +1,166 @@
+{
+  "steps": [
+    "Go to the More-tab. Then click Export Entries. Select CSV (table) and save the file in your preferred location.",
+    "Load the file in Dataflexor."
+  ],
+  "name": "Daylio",
+  "id": "e614dcb8-a28d-4efc-9293-7e6f738123ee",
+  "appVersion": "0.1.1",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\""
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": ["|"]
+      }
+    },
+    "sharedTransformationState": {
+      "idAggregationConfig": null,
+      "nameRegexes": [],
+      "groupedNames": [],
+      "newGroups": [],
+      "minimumRecords": 0,
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {
+        "activities": {
+          "name": "activities",
+          "group": "No group",
+          "typeConfig": {
+            "type": "TAG",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms",
+            "textMapping": {
+              "defaultValue": 0,
+              "mapping": {}
+            }
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": null
+        },
+        "date": {
+          "name": "date",
+          "group": "No group",
+          "typeConfig": {
+            "type": "DATE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "custom",
+            "textMapping": null
+          },
+          "aggregation": "AVG",
+          "ignore": true,
+          "tags": null
+        },
+        "mood": {
+          "name": "mood",
+          "group": "No group",
+          "typeConfig": {
+            "type": "BUCKET",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms",
+            "textMapping": {
+              "defaultValue": 0,
+              "mapping": {
+                "rad": 5,
+                "good": 4,
+                "meh": 3,
+                "bad": 2,
+                "awful": 1
+              }
+            }
+          },
+          "aggregation": ["AVG", "SUM"],
+          "ignore": false,
+          "tags": null
+        },
+        "note": {
+          "name": "note",
+          "group": "No group",
+          "typeConfig": {
+            "type": "BUCKET",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms",
+            "textMapping": null
+          },
+          "aggregation": "AVG",
+          "ignore": true,
+          "tags": null
+        },
+        "note_title": {
+          "name": "note_title",
+          "group": "No group",
+          "typeConfig": {
+            "type": "VALUE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms",
+            "textMapping": null
+          },
+          "aggregation": "AVG",
+          "ignore": true,
+          "tags": null
+        },
+        "time": {
+          "name": "time",
+          "group": "No group",
+          "typeConfig": {
+            "type": "REAL_TIME",
+            "timeFormat": "HH:mm",
+            "dateFormat": "HH:mm",
+            "dateType": "date",
+            "timeType": "custom",
+            "textMapping": null
+          },
+          "aggregation": "AVG",
+          "ignore": false,
+          "tags": null
+        },
+        "weekday": {
+          "name": "weekday",
+          "group": "No group",
+          "typeConfig": {
+            "type": "BUCKET",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms",
+            "textMapping": null
+          },
+          "aggregation": "AVG",
+          "ignore": true,
+          "tags": null
+        }
+      },
+      "optionalTransformations": {},
+      "groupByConfig": [],
+      "conditionFilters": [],
+      "dedupeColumns": [],
+      "dedupeTakeLast": false,
+      "cutFirstRows": false,
+      "cutLastRows": false,
+      "openSections": {},
+      "transposeHeader": 1
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {},
+      "splitNamesSeparators": []
+    }
+  }
+}
