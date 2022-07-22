@@ -126,21 +126,6 @@
           "ignore": false,
           "tags": null
         },
-        "Meds/Supplements": {
-          "name": "Allopurinol (mg), Antihistamin (pill), Baldrian (mg), Basentabletten (mg), Betaine HCl (mg), Calcium (mg), Carmenthin Kümmel (mg), Cbd 20% (drops), Cucurmin (mg), Iberogast (drops), Ingwer (mg), Kalium (mg), Kohle (mg), Kreon (Lipase), Lacto Bifido Blend (billion), Liadin (pack), Magnesium (mg), Magnesium Glycinat (mg), Melatonin (mg), Mometa (mikro-g), Multivitamin 950e (pill), Omega-3-Fettsäure (mg), Oreganoöl (mg), Ortoton (mg), Pfefferminzöl (mg), Phgg (g), Saccharomyces b. Probiotics (Billion), Soil based probiotic (Billion), Vitamin D (I.E.), Zink (mg)",
-          "group": "Meds/Supplements",
-          "typeConfig": {
-            "type": "VALUE_DEFAULT",
-            "timeFormat": "",
-            "dateFormat": "",
-            "dateType": "date",
-            "timeType": "ms",
-            "textMapping": null
-          },
-          "aggregation": "SUM",
-          "ignore": false,
-          "tags": null
-        },
         "Mood": {
           "name": "Mood",
           "group": "Mood",
@@ -156,8 +141,23 @@
           "ignore": false,
           "tags": null
         },
+        "Meds/Supplements": {
+          "name": "",
+          "group": "Meds/Supplements",
+          "typeConfig": {
+            "type": "VALUE_DEFAULT",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms",
+            "textMapping": null
+          },
+          "aggregation": "SUM",
+          "ignore": false,
+          "tags": null
+        },
         "Symptom": {
-          "name": "Abdomen pain, Anxiety, Bloating, Brain fog, Dizziness, Fatigue, Feet pain, Leg Feeling, Little ill, Muscle pain, Short low, Sinus headache, Sodbrennen, Stomach, Stomach other, Stress, Tiredness",
+          "name": "",
           "group": "Symptom",
           "typeConfig": {
             "type": "VALUE_DEFAULT",
@@ -167,7 +167,7 @@
             "timeType": "ms",
             "textMapping": null
           },
-          "aggregation": ["AVG", "MAX", "SUM"],
+          "aggregation": ["AVG", "SUM", "MAX"],
           "ignore": false,
           "tags": null
         }
