@@ -1,0 +1,218 @@
+{
+  "steps": [
+    "Open the app. Go to the More-Tab. In the Data + Security section click My Data.",
+    "Select All time and click Export. Save the resulting file in your preferred location and load it into Dataflexor."
+  ],
+  "name": "Bearable",
+  "id": "cc143b77-d167-4f7c-b38d-7b135968996c",
+  "appVersion": "0.1.1",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\""
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": [",", ":"]
+      }
+    },
+    "sharedTransformationState": {
+      "idAggregationConfig": [
+        {
+          "name": "date",
+          "typeConfig": {
+            "type": "DATE",
+            "timeFormat": "do MMM yyyy",
+            "dateFormat": "do MMM yyyy",
+            "dateType": "date",
+            "timeType": "custom",
+            "textMapping": null
+          },
+          "aggregation": "AVG",
+          "fillIds": true
+        }
+      ],
+      "nameRegexes": [
+        {
+          "regex": "^(OK|GOOD|Great|Poor|Awful)$",
+          "newName": "Quality"
+        }, {
+          "regex": "(.*)[.] (Snacks)",
+          "newName": null
+        }, {
+          "regex": "(.*) \\((Mild|Moderate|Severe|Unbearable)\\)",
+          "newName": null
+        }
+      ],
+      "groupedNames": [],
+      "newGroups": [
+        {
+          "name": "",
+          "items": [
+            {
+              "name": "Bowel Movements",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "",
+          "items": [
+            {
+              "name": "Mood",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "",
+          "items": [
+            {
+              "name": "Sleep quality",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "",
+          "items": [
+            {
+              "name": "Sleep",
+              "group": null
+            }
+          ]
+        }, {
+          "name": "",
+          "items": [
+            {
+              "name": "Energy",
+              "group": null
+            }
+          ]
+        }
+      ],
+      "minimumRecords": 10,
+      "aggregationConfigBy": "group",
+      "aggregationConfig": {
+        "Bowel Movements": {
+          "name": "Bowel Movements",
+          "group": "No group",
+          "typeConfig": {
+            "type": "VALUE_DEFAULT",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "custom",
+            "textMapping": null
+          },
+          "aggregation": ["AVG", "MIN", "MAX", "COUNT"],
+          "ignore": false,
+          "tags": null
+        },
+        "Energy": {
+          "name": "Energy",
+          "group": "Energy",
+          "typeConfig": {
+            "type": "VALUE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms",
+            "textMapping": null
+          },
+          "aggregation": ["AVG", "MIN", "MAX"],
+          "ignore": false,
+          "tags": null
+        },
+        "Meds/Supplements": {
+          "name": "Allopurinol (mg), Antihistamin (pill), Baldrian (mg), Basentabletten (mg), Betaine HCl (mg), Calcium (mg), Carmenthin Kümmel (mg), Cbd 20% (drops), Cucurmin (mg), Iberogast (drops), Ingwer (mg), Kalium (mg), Kohle (mg), Kreon (Lipase), Lacto Bifido Blend (billion), Liadin (pack), Magnesium (mg), Magnesium Glycinat (mg), Melatonin (mg), Mometa (mikro-g), Multivitamin 950e (pill), Omega-3-Fettsäure (mg), Oreganoöl (mg), Ortoton (mg), Pfefferminzöl (mg), Phgg (g), Saccharomyces b. Probiotics (Billion), Soil based probiotic (Billion), Vitamin D (I.E.), Zink (mg)",
+          "group": "Meds/Supplements",
+          "typeConfig": {
+            "type": "VALUE_DEFAULT",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms",
+            "textMapping": null
+          },
+          "aggregation": "SUM",
+          "ignore": false,
+          "tags": null
+        },
+        "Mood": {
+          "name": "Mood",
+          "group": "Mood",
+          "typeConfig": {
+            "type": "VALUE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms",
+            "textMapping": null
+          },
+          "aggregation": ["AVG", "MIN", "MAX"],
+          "ignore": false,
+          "tags": null
+        },
+        "Symptom": {
+          "name": "Abdomen pain, Anxiety, Bloating, Brain fog, Dizziness, Fatigue, Feet pain, Leg Feeling, Little ill, Muscle pain, Short low, Sinus headache, Sodbrennen, Stomach, Stomach other, Stress, Tiredness",
+          "group": "Symptom",
+          "typeConfig": {
+            "type": "VALUE_DEFAULT",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms",
+            "textMapping": null
+          },
+          "aggregation": ["AVG", "MAX", "SUM"],
+          "ignore": false,
+          "tags": null
+        }
+      },
+      "optionalTransformations": {
+        "longToWide": true,
+        "mergeFieldsByText": true,
+        "createGroups": true
+      },
+      "groupByConfig": [],
+      "conditionFilters": [],
+      "dedupeColumns": [],
+      "dedupeTakeLast": false,
+      "cutFirstRows": false,
+      "cutLastRows": false,
+      "openSections": {},
+      "transposeHeader": 1
+    },
+    "logCsvState": {
+      "groupsWithoutName": [
+        {
+          "group": "Sleep",
+          "tags": []
+        }, {
+          "group": "Energy",
+          "tags": []
+        }, {
+          "group": "Bowel Movements",
+          "tags": []
+        }, {
+          "group": "Sleep quality",
+          "tags": []
+        }, {
+          "group": "Mood",
+          "tags": []
+        }
+      ],
+      "csvConfig": {
+        "ignore": ["time of day"],
+        "id": ["date"],
+        "name": ["detail"],
+        "value": ["rating/amount"],
+        "group": ["category"]
+      },
+      "splitNamesSeparators": [",", "|"]
+    }
+  }
+}
