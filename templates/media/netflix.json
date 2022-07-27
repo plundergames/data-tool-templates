@@ -33,51 +33,37 @@
       "nameRegexes": [],
       "groupedNames": [
         {
-          "name": "Number of titles",
+          "name": "Titles",
           "items": ["Title-1", "Title"],
           "keepOriginal": false
         }, {
-          "name": "Number of movies",
+          "name": "Movies - COUNT",
           "items": ["Title"]
         }, {
           "name": "Series",
           "items": ["Title-1"]
         }, {
-          "name": "Number of series",
+          "name": "Series - COUNT",
           "items": ["Title-1"]
         }
       ],
       "newGroups": [],
-      "minimumRecords": 0,
+      "minimumRecords": 5,
       "aggregationConfigBy": "name",
       "aggregationConfig": {
-        "Number of movies": {
+        "Movies - COUNT": {
           "aggregation": "COUNT"
-        },
-        "Number of series": {
-          "typeConfig": {
-            "type": "VALUE"
-          },
-          "aggregation": "COUNT"
-        },
-        "Number of titles": {
-          "name": "Number of titles",
-          "group": "No group",
-          "typeConfig": {
-            "type": "VALUE",
-            "timeFormat": "",
-            "dateFormat": "",
-            "dateType": "date",
-            "timeType": "ms"
-          },
-          "aggregation": "COUNT",
-          "ignore": false,
-          "tags": []
         },
         "Series": {
           "typeConfig": {
             "type": "TAG"
           }
+        },
+        "Series - COUNT": {
+          "typeConfig": {
+            "type": "VALUE"
+          },
+          "aggregation": "COUNT"
         },
         "Title-2": {
           "ignore": true
@@ -93,6 +79,12 @@
         },
         "Title-6": {
           "ignore": true
+        },
+        "Titles": {
+          "typeConfig": {
+            "type": "VALUE"
+          },
+          "aggregation": ["COUNT", "COUNT UNIQUE"]
         }
       },
       "optionalTransformations": {
