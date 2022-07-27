@@ -26,9 +26,7 @@
         {
           "name": "Date",
           "fillIds": true,
-          "typeConfig": {
-            "dateFormat": "dd.MM.yy"
-          }
+          "typeConfig": {}
         }
       ],
       "nameRegexes": [],

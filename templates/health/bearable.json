@@ -18,7 +18,7 @@
       },
       "valueFormatConfig": {
         "hasCommaDecimals": false,
-        "splitValuesSeparators": [",", ":"]
+        "splitValuesSeparators": [","]
       }
     },
     "sharedTransformationState": {
@@ -126,21 +126,6 @@
           "ignore": false,
           "tags": null
         },
-        "Mood": {
-          "name": "Mood",
-          "group": "Mood",
-          "typeConfig": {
-            "type": "VALUE",
-            "timeFormat": "",
-            "dateFormat": "",
-            "dateType": "date",
-            "timeType": "ms",
-            "textMapping": null
-          },
-          "aggregation": ["AVG", "MIN", "MAX"],
-          "ignore": false,
-          "tags": null
-        },
         "Meds/Supplements": {
           "name": "",
           "group": "Meds/Supplements",
@@ -153,6 +138,21 @@
             "textMapping": null
           },
           "aggregation": "SUM",
+          "ignore": false,
+          "tags": null
+        },
+        "Mood": {
+          "name": "Mood",
+          "group": "Mood",
+          "typeConfig": {
+            "type": "VALUE",
+            "timeFormat": "",
+            "dateFormat": "",
+            "dateType": "date",
+            "timeType": "ms",
+            "textMapping": null
+          },
+          "aggregation": ["AVG", "MIN", "MAX"],
           "ignore": false,
           "tags": null
         },
