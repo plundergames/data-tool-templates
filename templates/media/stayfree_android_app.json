@@ -2,12 +2,11 @@
   "steps": [
     "Open the StayFree Android App and open the menu.",
     "Click Export to CSV, check that Total Usage is selected and the whole day range. Then click Export.",
-    "The exported file is a XLS (not a CSV like expected), so you have to convert it to a CSV file first (in Google sheets or excel).",
-    "The resulting Csv you can load in Dataflexor."
+    "Select a location where to export and load the file into Dataflexor."
   ],
   "name": "StayFree Android App",
   "id": "028e904b-a3c3-4e30-b385-848f82ac25df",
-  "appVersion": "0.1.1",
+  "appVersion": "0.1.2",
   "state": {
     "sourceState": {
       "csvFileConfig": {
@@ -16,12 +15,13 @@
       },
       "tableConfig": {
         "skipFirst": false,
-        "skipLast": false
+        "skipLast": 3
       },
       "valueFormatConfig": {
         "hasCommaDecimals": false,
         "splitValuesSeparators": []
-      }
+      },
+      "sourceFileType": "excel"
     },
     "sharedTransformationState": {
       "idAggregationConfig": [
