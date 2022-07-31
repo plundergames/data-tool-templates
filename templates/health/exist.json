@@ -1,0 +1,108 @@
+{
+  "steps": [
+    "Go to the settings and export your data. ", "Unzip the downloaded file.",
+    "In Dataflexor select all files that start with \"data_\"."
+  ],
+  "name": "Exist",
+  "id": "704f00bb-e366-429f-9e60-24be03418919",
+  "appVersion": "0.1.2",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\""
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": [],
+        "splitColumnsSeparators": []
+      },
+      "sourceFileType": "json"
+    },
+    "sharedTransformationState": {
+      "idAggregationConfig": null,
+      "nameRegexes": [],
+      "groupedNames": [],
+      "newGroups": [],
+      "minimumRecords": 0,
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {
+        "data_day_length_2022": {
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "m"
+          }
+        },
+        "data_location_2022": {
+          "ignore": true
+        },
+        "data_meditation_min_2022": {
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "m"
+          }
+        },
+        "data_mood_note_2022": {
+          "ignore": true
+        },
+        "data_sleep_2022": {
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "m"
+          }
+        },
+        "data_sleep_end_2022": {
+          "ignore": true
+        },
+        "data_sleep_goal_2022": {
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "m"
+          }
+        },
+        "data_sleep_start_2022": {
+          "ignore": true
+        },
+        "data_steps_active_min_2022": {
+          "typeConfig": {
+            "type": "TIME",
+            "timeType": "m"
+          }
+        },
+        "data_time_in_bed_2022": {
+          "typeConfig": {
+            "type": "VALUE",
+            "timeType": "ms"
+          },
+          "ignore": true
+        }
+      },
+      "optionalTransformations": {
+        "longToWide": true
+      },
+      "groupByConfig": [],
+      "conditionFilters": [],
+      "dedupeColumns": [],
+      "dedupeTakeLast": false,
+      "cutFirstRows": false,
+      "cutLastRows": false,
+      "openSections": {},
+      "transposeHeader": 1
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {
+        "ignore": [],
+        "id": ["date"],
+        "name": ["Table File Name"],
+        "value": ["value"],
+        "group": []
+      },
+      "splitNamesSeparators": []
+    }
+  }
+}
