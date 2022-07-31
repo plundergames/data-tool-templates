@@ -33,6 +33,7 @@ async function getPreviews(category) {
 
     const url = `${category}/${templateName}`;
     return {
+      fileType: templateJson.state.sourceState.sourceFileType,
       name: templateJson.name,
       url,
       steps: templateJson.steps || null
