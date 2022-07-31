@@ -1,0 +1,110 @@
+{
+  "steps": [],
+  "name": "Huawei Health",
+  "id": "02e7d9db-fb42-402f-a7a1-97f36289be07",
+  "appVersion": "0.1.2",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\""
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": [],
+        "splitColumnsSeparators": []
+      },
+      "sourceFileType": "json"
+    },
+    "sharedTransformationState": {
+      "idAggregationConfig": [
+        {
+          "name": "startTime",
+          "fillIds": true,
+          "typeConfig": {
+            "dateType": "date"
+          }
+        }
+      ],
+      "nameRegexes": [],
+      "groupedNames": [
+        {
+          "name": "Duration",
+          "items": ["samplePoints.startTime", "samplePoints.endTime"]
+        }
+      ],
+      "newGroups": [],
+      "minimumRecords": 0,
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {
+        "Duration": {
+          "typeConfig": {
+            "type": "TIME"
+          },
+          "aggregation": "PAIR"
+        },
+        "appType": {
+          "ignore": true
+        },
+        "deviceCode": {
+          "ignore": true
+        },
+        "endTime": {
+          "ignore": false
+        },
+        "healthDataSource": {
+          "ignore": true
+        },
+        "recordId": {
+          "ignore": true
+        },
+        "samplePoints.unit": {
+          "ignore": true
+        },
+        "timeZone": {
+          "ignore": true
+        },
+        "type": {
+          "ignore": true
+        },
+        "version": {
+          "ignore": true
+        },
+        "startTime": {
+          "ignore": true
+        }
+      },
+      "optionalTransformations": {
+        "groupByValue": true,
+        "mergeFields": true
+      },
+      "groupByConfig": [
+        {
+          "name": "samplePoints.key",
+          "group": null,
+          "activeGroups": [
+            "DATA_POINT_DYNAMIC_HEARTRATE", "DATA_POINT_REST_HEARTRATE", "PROFESSIONAL_SLEEP_DEEP",
+            "PROFESSIONAL_SLEEP_DREAM", "PROFESSIONAL_SLEEP_NOON", "PROFESSIONAL_SLEEP_SHALLOW",
+            "PROFESSIONAL_SLEEP_WAKE"
+          ]
+        }
+      ],
+      "conditionFilters": [],
+      "dedupeColumns": [],
+      "dedupeTakeLast": false,
+      "cutFirstRows": false,
+      "cutLastRows": false,
+      "openSections": {},
+      "transposeHeader": 1
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {},
+      "splitNamesSeparators": []
+    }
+  }
+}
