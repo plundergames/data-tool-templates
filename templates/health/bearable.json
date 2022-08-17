@@ -5,7 +5,7 @@
   ],
   "name": "Bearable",
   "id": "cc143b77-d167-4f7c-b38d-7b135968996c",
-  "appVersion": "0.1.1",
+  "appVersion": "0.1.2",
   "state": {
     "sourceState": {
       "csvFileConfig": {
@@ -18,8 +18,9 @@
       },
       "valueFormatConfig": {
         "hasCommaDecimals": false,
-        "splitValuesSeparators": [","]
-      }
+        "splitValuesSeparators": [",", "|"]
+      },
+      "sourceFileType": null
     },
     "sharedTransformationState": {
       "idAggregationConfig": [
@@ -42,10 +43,13 @@
           "regex": "^(OK|GOOD|Great|Poor|Awful)$",
           "newName": "Quality"
         }, {
-          "regex": "(.*)[.] (Snacks)",
+          "regex": "(.*) \\((Mild|Moderate|Severe|Unbearable)\\)",
           "newName": null
         }, {
-          "regex": "(.*) \\((Mild|Moderate|Severe|Unbearable)\\)",
+          "regex": "(.*)[.] (Snacks): (.*)",
+          "newName": null
+        }, {
+          "regex": "(Meals): (.+)",
           "newName": null
         }
       ],
