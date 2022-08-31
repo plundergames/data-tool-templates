@@ -1,1 +1,50 @@
-{"steps":["Go to the More-tab and click Download CSV.","Be sure that Trackable Per Column is checked and add all Trackables that you want to export.","Click Preview and then Download. The resulting file can be loaded into Dataflexor."],"name":"Nomie 6","id":"f21bf962-bd40-4866-ae21-d2ff115a4e7d","appVersion":"0.1.1","state":{"sourceState":{"csvFileConfig":{"header":true,"quoteChar":"\""},"tableConfig":{"skipFirst":false,"skipLast":false},"valueFormatConfig":{"hasCommaDecimals":false,"splitValuesSeparators":[]}},"sharedTransformationState":{"idAggregationConfig":null,"nameRegexes":[],"groupedNames":[],"newGroups":[],"minimumRecords":0,"aggregationConfigBy":"name","aggregationConfig":{},"optionalTransformations":{},"groupByConfig":[],"conditionFilters":[],"dedupeColumns":[],"dedupeTakeLast":false,"cutFirstRows":false,"cutLastRows":false,"openSections":{},"transposeHeader":1},"logCsvState":{"groupsWithoutName":[],"csvConfig":{},"splitNamesSeparators":[]}}}
+{
+  "steps": [
+    "Go to the More-tab and click Download CSV.",
+    "Be sure that Trackable Per Column is checked and add all Trackables that you want to export.",
+    "Click Preview and then Download. The resulting file can be loaded into Dataflexor."
+  ],
+  "name": "Nomie 6",
+  "id": "f21bf962-bd40-4866-ae21-d2ff115a4e7d",
+  "appVersion": "0.1.1",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\""
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": []
+      },
+      "sourceFileType": "csv"
+    },
+    "sharedTransformationState": {
+      "idAggregationConfig": null,
+      "nameRegexes": [],
+      "groupedNames": [],
+      "newGroups": [],
+      "minimumRecords": 0,
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {},
+      "optionalTransformations": {},
+      "groupByConfig": [],
+      "conditionFilters": [],
+      "dedupeColumns": [],
+      "dedupeTakeLast": false,
+      "cutFirstRows": false,
+      "cutLastRows": false,
+      "openSections": {},
+      "transposeHeader": 1
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {},
+      "splitNamesSeparators": []
+    }
+  }
+}

@@ -22,7 +22,8 @@
       "valueFormatConfig": {
         "hasCommaDecimals": false,
         "splitValuesSeparators": []
-      }
+      },
+      "sourceFileType": "csv"
     },
     "sharedTransformationState": {
       "idAggregationConfig": [

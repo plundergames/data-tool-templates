@@ -23,7 +23,8 @@
         "hasCommaDecimals": false,
         "splitValuesSeparators": [],
         "skimUnreadableChars": false
-      }
+      },
+      "sourceFileType": "csv"
     },
     "sharedTransformationState": {
       "idAggregationConfig": [

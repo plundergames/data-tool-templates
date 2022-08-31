@@ -20,7 +20,8 @@
         "hasCommaDecimals": false,
         "splitValuesSeparators": [],
         "splitColumnsSeparators": [":"]
-      }
+      },
+      "sourceFileType": "csv"
     },
     "sharedTransformationState": {
       "idAggregationConfig": [

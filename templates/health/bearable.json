@@ -20,7 +20,7 @@
         "hasCommaDecimals": false,
         "splitValuesSeparators": [",", "|"]
       },
-      "sourceFileType": null
+      "sourceFileType": "csv"
     },
     "sharedTransformationState": {
       "idAggregationConfig": [
