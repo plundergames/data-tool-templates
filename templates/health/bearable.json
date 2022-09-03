@@ -1,7 +1,6 @@
 {
   "steps": [
-    "Open the app. Go to the More-Tab. In the Data + Security section click My Data.",
-    "Select All time and click Export. Save the resulting file in your preferred location and load it into Dataflexor."
+    "Open the app. Go to the More-Tab. In the Data + Security section click My Data.", "Select All time and click Export. Save the resulting file in your preferred location and load it into Dataflexor."
   ],
   "name": "Bearable",
   "id": "cc143b77-d167-4f7c-b38d-7b135968996c",
@@ -18,7 +17,9 @@
       },
       "valueFormatConfig": {
         "hasCommaDecimals": false,
-        "splitValuesSeparators": [",", "|"]
+        "splitValuesSeparators": [
+          ",", "|"
+        ]
       },
       "sourceFileType": "csv"
     },
@@ -111,7 +112,9 @@
             "timeType": "custom",
             "textMapping": null
           },
-          "aggregation": ["AVG", "MIN", "MAX", "COUNT"],
+          "aggregation": [
+            "AVG", "COUNT"
+          ],
           "ignore": false,
           "tags": null
         },
@@ -126,7 +129,9 @@
             "timeType": "ms",
             "textMapping": null
           },
-          "aggregation": ["AVG", "MIN", "MAX"],
+          "aggregation": [
+            "AVG"
+          ],
           "ignore": false,
           "tags": null
         },
@@ -156,7 +161,7 @@
             "timeType": "ms",
             "textMapping": null
           },
-          "aggregation": ["AVG", "MIN", "MAX"],
+          "aggregation": "AVG",
           "ignore": false,
           "tags": null
         },
@@ -171,7 +176,7 @@
             "timeType": "ms",
             "textMapping": null
           },
-          "aggregation": ["AVG", "SUM", "MAX"],
+          "aggregation": "SUM",
           "ignore": false,
           "tags": null
         }
@@ -210,13 +215,25 @@
         }
       ],
       "csvConfig": {
-        "ignore": ["time of day"],
-        "id": ["date"],
-        "name": ["detail"],
-        "value": ["rating/amount"],
-        "group": ["category"]
+        "ignore": [
+          "time of day"
+        ],
+        "id": [
+          "date"
+        ],
+        "name": [
+          "detail"
+        ],
+        "value": [
+          "rating/amount"
+        ],
+        "group": [
+          "category"
+        ]
       },
-      "splitNamesSeparators": [",", "|"]
+      "splitNamesSeparators": [
+        ",", "|"
+      ]
     }
   }
 }
