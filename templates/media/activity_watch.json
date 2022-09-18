@@ -1,0 +1,74 @@
+{
+  "steps": [
+    "Open the Activity Watch Web interface in the browser.", "Open the tab \"Raw Data\".",
+    "For the bucket \"aw-watcher-window...\" click on the more-button and select \"export events as CSV\"",
+    "Load the file into Dataflexor."
+  ],
+  "name": "Activity Watch",
+  "id": "0ff63979-0bd9-494b-b159-89a68e22fa9f",
+  "appVersion": "0.1.2",
+  "state": {
+    "sourceState": {
+      "csvFileConfig": {
+        "header": true,
+        "quoteChar": "\""
+      },
+      "tableConfig": {
+        "skipFirst": false,
+        "skipLast": false
+      },
+      "valueFormatConfig": {
+        "hasCommaDecimals": false,
+        "splitValuesSeparators": [],
+        "splitColumnsSeparators": []
+      },
+      "sourceFileType": "csv"
+    },
+    "sharedTransformationState": {
+      "idAggregationConfig": null,
+      "nameRegexes": [],
+      "groupedNames": [],
+      "copiedColumns": [],
+      "newGroups": [],
+      "minimumRecords": 10,
+      "aggregationConfigBy": "name",
+      "aggregationConfig": {
+        "duration": {
+          "typeConfig": {
+            "type": "TIME_DEFAULT",
+            "timeType": "s"
+          },
+          "aggregation": ["AVG", "SUM"]
+        },
+        "title": {
+          "ignore": true
+        },
+        "timestamp": {
+          "ignore": true
+        }
+      },
+      "optionalTransformations": {
+        "groupByValue": true
+      },
+      "groupByConfig": [
+        {
+          "name": "app",
+          "group": null,
+          "activeGroups": null
+        }
+      ],
+      "conditionFilters": [],
+      "dedupeColumns": [],
+      "dedupeTakeLast": false,
+      "cutFirstRows": false,
+      "cutLastRows": false,
+      "openSections": {},
+      "transposeHeader": 1,
+      "defaultsToZero": false
+    },
+    "logCsvState": {
+      "groupsWithoutName": [],
+      "csvConfig": {}
+    }
+  }
+}
