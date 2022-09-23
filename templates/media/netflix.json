@@ -4,8 +4,8 @@
     "Scroll down and click \"download all\"."
   ],
   "name": "Netflix",
-  "id": "860268c6-45e9-49fd-ac04-88cd77dc8721",
-  "appVersion": "0.1.1",
+  "id": "c2bad102-3043-4ec3-af03-cb501bdc4fbe",
+  "appVersion": "0.1.2",
   "state": {
     "sourceState": {
       "csvFileConfig": {
@@ -34,7 +34,7 @@
       "nameRegexes": [],
       "groupedNames": [
         {
-          "name": "Titles",
+          "name": "Titles - COUNT",
           "items": ["Title-1", "Title"],
           "keepOriginal": false
         }, {
@@ -48,6 +48,7 @@
           "items": ["Title-1"]
         }
       ],
+      "copiedColumns": [],
       "newGroups": [],
       "minimumRecords": 5,
       "aggregationConfigBy": "name",
@@ -81,11 +82,10 @@
         "Title-6": {
           "ignore": true
         },
-        "Titles": {
+        "Titles - COUNT": {
           "typeConfig": {
             "type": "VALUE"
-          },
-          "aggregation": ["COUNT", "COUNT UNIQUE"]
+          }
         }
       },
       "optionalTransformations": {
@@ -100,8 +100,8 @@
       "cutLastRows": false,
       "openSections": {},
       "transposeHeader": 1,
-      "transformationName": "Oura",
-      "selectedTemplateId": "77a3f45c-8635-4d3a-8d22-166b5b1a05b8",
+      "defaultsToZero": false,
+      "defaultAggregation": "COUNT",
       "splitValuesSeparators": [],
       "transformationType": 2,
       "idFormat": "ID::DATE",
