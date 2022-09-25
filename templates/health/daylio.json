@@ -4,8 +4,8 @@
     "Load the file in Dataflexor."
   ],
   "name": "Daylio",
-  "id": "e614dcb8-a28d-4efc-9293-7e6f738123ee",
-  "appVersion": "0.1.1",
+  "id": "fe3c01f8-5c82-4c18-a767-39699640695e",
+  "appVersion": "0.1.2",
   "state": {
     "sourceState": {
       "csvFileConfig": {
@@ -18,7 +18,9 @@
       },
       "valueFormatConfig": {
         "hasCommaDecimals": false,
-        "splitValuesSeparators": ["|"]
+        "splitValuesSeparators": [
+          "|"
+        ]
       },
       "sourceFileType": "csv"
     },
@@ -26,8 +28,9 @@
       "idAggregationConfig": null,
       "nameRegexes": [],
       "groupedNames": [],
+      "copiedColumns": [],
       "newGroups": [],
-      "minimumRecords": 0,
+      "minimumRecords": 1,
       "aggregationConfigBy": "name",
       "aggregationConfig": {
         "activities": {
@@ -83,7 +86,7 @@
               }
             }
           },
-          "aggregation": ["AVG", "SUM"],
+          "aggregation": "AVG",
           "ignore": false,
           "tags": null
         },
@@ -156,7 +159,9 @@
       "cutFirstRows": false,
       "cutLastRows": false,
       "openSections": {},
-      "transposeHeader": 1
+      "transposeHeader": 1,
+      "defaultsToZero": false,
+      "defaultAggregation": "AVG"
     },
     "logCsvState": {
       "groupsWithoutName": [],
