@@ -5,7 +5,20 @@
   "main": "build.js",
   "type": "module",
   "scripts": {
-    "build": "node ."
+    "build": "node .",
+    "watch:templates": "npm-watch"
   },
-  "author": ""
+  "watch": {
+    "build":  {
+      "patterns": [
+        "templates"
+      ],
+      "extensions": "json",
+      "quiet": false
+    }
+  },
+  "author": "",
+  "dependencies": {
+    "npm-watch": "^0.11.0"
+  }
 }
