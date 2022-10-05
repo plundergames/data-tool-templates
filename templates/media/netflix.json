@@ -50,7 +50,7 @@
       ],
       "copiedColumns": [],
       "newGroups": [],
-      "minimumRecords": 5,
+      "minimumRecords": 2,
       "aggregationConfigBy": "name",
       "aggregationConfig": {
         "Movies - COUNT": {
