@@ -1,9 +1,10 @@
 {
   "steps": [
-    "Open the app. Go to the More-Tab. In the Data + Security section click My Data.", "Select All time and click Export. Save the resulting file in your preferred location and load it into Dataflexor."
+    "Open the app. Go to the More-Tab. In the Data + Security section click My Data.",
+    "Select All time and click Export. Save the resulting file in your preferred location and load it into Dataflexor."
   ],
   "name": "Bearable",
-  "id": "cc143b77-d167-4f7c-b38d-7b135968996c",
+  "id": "3f6fcec3-61c2-4ac0-af7b-8324401de0bd",
   "appVersion": "0.1.2",
   "state": {
     "sourceState": {
@@ -18,7 +19,8 @@
       "valueFormatConfig": {
         "hasCommaDecimals": false,
         "splitValuesSeparators": [
-          ",", "|"
+          ",",
+          "|"
         ]
       },
       "sourceFileType": "csv"
@@ -43,18 +45,22 @@
         {
           "regex": "^(OK|GOOD|Great|Poor|Awful)$",
           "newName": "Quality"
-        }, {
+        },
+        {
           "regex": "(.*) \\((Mild|Moderate|Severe|Unbearable)\\)",
           "newName": null
-        }, {
+        },
+        {
           "regex": "(.*)[.] (Snacks): (.*)",
           "newName": null
-        }, {
+        },
+        {
           "regex": "(Meals): (.+)",
           "newName": null
         }
       ],
       "groupedNames": [],
+      "copiedColumns": [],
       "newGroups": [
         {
           "name": "",
@@ -64,7 +70,8 @@
               "group": null
             }
           ]
-        }, {
+        },
+        {
           "name": "",
           "items": [
             {
@@ -72,7 +79,8 @@
               "group": null
             }
           ]
-        }, {
+        },
+        {
           "name": "",
           "items": [
             {
@@ -80,7 +88,8 @@
               "group": null
             }
           ]
-        }, {
+        },
+        {
           "name": "",
           "items": [
             {
@@ -88,7 +97,8 @@
               "group": null
             }
           ]
-        }, {
+        },
+        {
           "name": "",
           "items": [
             {
@@ -113,7 +123,8 @@
             "textMapping": null
           },
           "aggregation": [
-            "AVG", "COUNT"
+            "AVG",
+            "COUNT"
           ],
           "ignore": false,
           "tags": null
@@ -184,32 +195,50 @@
       "optionalTransformations": {
         "longToWide": true,
         "mergeFieldsByText": true,
-        "createGroups": true
+        "createGroups": true,
+        "filterRecords": true
       },
       "groupByConfig": [],
-      "conditionFilters": [],
+      "conditionFilters": [
+        {
+          "operation": "includes not",
+          "value": 0,
+          "values": [
+            "None"
+          ],
+          "columnId": "Bowel Movements-",
+          "appliedOn": "Bowel Movements-"
+        }
+      ],
       "dedupeColumns": [],
       "dedupeTakeLast": false,
       "cutFirstRows": false,
       "cutLastRows": false,
       "openSections": {},
-      "transposeHeader": 1
+      "transposeHeader": 1,
+      "defaultsToZero": false,
+      "defaultAggregation": "AVG",
+      "defaultIgnore": true
     },
     "logCsvState": {
       "groupsWithoutName": [
         {
           "group": "Sleep",
           "tags": []
-        }, {
+        },
+        {
           "group": "Energy",
           "tags": []
-        }, {
+        },
+        {
           "group": "Bowel Movements",
           "tags": []
-        }, {
+        },
+        {
           "group": "Sleep quality",
           "tags": []
-        }, {
+        },
+        {
           "group": "Mood",
           "tags": []
         }
@@ -232,7 +261,8 @@
         ]
       },
       "splitNamesSeparators": [
-        ",", "|"
+        ",",
+        "|"
       ]
     }
   }
