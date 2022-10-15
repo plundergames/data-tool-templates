@@ -1,11 +1,12 @@
 {
   "steps": [
-    "Open the Activity Watch Web interface in the browser.", "Open the tab \"Raw Data\".",
+    "Open the Activity Watch Web interface in the browser.",
+    "Open the tab \"Raw Data\".",
     "For the bucket \"aw-watcher-window...\" click on the more-button and select \"export events as CSV\"",
     "Load the file into Dataflexor."
   ],
-  "name": "Activity Watch",
-  "id": "0ff63979-0bd9-494b-b159-89a68e22fa9f",
+  "name": "Activity Watch - Window (CSV)",
+  "id": "9e97567b-8b21-470a-a42d-494c68fd0dd7",
   "appVersion": "0.1.2",
   "state": {
     "sourceState": {
@@ -38,10 +39,10 @@
             "type": "TIME_DEFAULT",
             "timeType": "s"
           },
-          "aggregation": ["AVG", "SUM"]
-        },
-        "title": {
-          "ignore": true
+          "aggregation": [
+            "AVG",
+            "SUM"
+          ]
         },
         "timestamp": {
           "ignore": true
@@ -52,7 +53,7 @@
       },
       "groupByConfig": [
         {
-          "name": "app",
+          "name": "data/app",
           "group": null,
           "activeGroups": null
         }
@@ -64,7 +65,9 @@
       "cutLastRows": false,
       "openSections": {},
       "transposeHeader": 1,
-      "defaultsToZero": false
+      "defaultsToZero": false,
+      "defaultAggregation": "AVG",
+      "defaultIgnore": true
     },
     "logCsvState": {
       "groupsWithoutName": [],
