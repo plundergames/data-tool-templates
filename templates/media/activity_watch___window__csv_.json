@@ -40,9 +40,11 @@
             "timeType": "s"
           },
           "aggregation": [
-            "AVG",
             "SUM"
           ]
+        },
+        "app": {
+          "ignore": true
         },
         "timestamp": {
           "ignore": true
@@ -65,7 +67,7 @@
       "cutLastRows": false,
       "openSections": {},
       "transposeHeader": 1,
-      "defaultsToZero": false,
+      "defaultsToZero": true,
       "defaultAggregation": "AVG",
       "defaultIgnore": true
     },
