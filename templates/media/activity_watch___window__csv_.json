@@ -6,7 +6,7 @@
     "Load the file into Dataflexor."
   ],
   "name": "Activity Watch - Window (CSV)",
-  "id": "9e97567b-8b21-470a-a42d-494c68fd0dd7",
+  "id": "cbb4fd78-3644-4948-9e85-3515a7d50f01",
   "appVersion": "0.1.2",
   "state": {
     "sourceState": {
@@ -53,7 +53,7 @@
       },
       "groupByConfig": [
         {
-          "name": "data/app",
+          "name": "app",
           "group": null,
           "activeGroups": null
         }
