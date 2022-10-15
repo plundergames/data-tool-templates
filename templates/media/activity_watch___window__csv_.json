@@ -40,9 +40,11 @@
             "timeType": "s"
           },
           "aggregation": [
-            "AVG",
             "SUM"
           ]
+        },
+        "app": {
+          "ignore": true
         },
         "timestamp": {
           "ignore": true
