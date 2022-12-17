@@ -68,7 +68,8 @@
           "value": 0,
           "values": [
             "Device",
-            "Table File Name"
+            "Table File Name",
+            "Total Usage"
           ],
           "columnId": "Row ID-",
           "appliedOn": ""
