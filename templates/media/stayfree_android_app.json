@@ -39,21 +39,7 @@
       "newGroups": [],
       "minimumRecords": 10,
       "aggregationConfigBy": "group",
-      "aggregationConfig": {
-        "": {
-          "name": "Android Auto, Android-System, AppGallery, AppLock, Audiobook Player for Spotify, Authenticator, Brave, Breathe, Bumble, Calm, Chrome, DAB SecurePlus, Dateien, Discord, Docs, Drive, Duo, Einstellungen, Elite HRV, Flynn, FoodMarble, Fotos, Gboard, Gerätehilfe, Gmail, Google, Google Pay, Google Play Musik, Google Play Spiele, Google Play Store, Google Play-Dienste, Google Podcasts, Google TV, Govee Home, HMS Core, Hangouts, Headspace, Hintergründe, Home, JOYCE, Kalender, Kamera, Keepass2Android, Kontakte, Lime, Maps, Mealime, Messages, Mindroid, Moto, Moto Action und Gesten, Moto App Launcher, Moto Sprache für Alexa, Motorola-Benachrichtigungen, MyApp, N26, OneDrive, Outlook, PAYBACK, Paket-Installer, Paladin's Story, PayPal, Präsentationen, Radio, Rechner, Reddit, S2GS, Sleep Sounds, SnoreLab, Speech Services by Google, Spotify, StayFree, System-UI, Tabellen, Telefon, Termux, Total Usage, UPRIGHT, Uhr, Vorschläge für die Einstellungen, Web Video Caster, WhatsApp, YouTube, com.uprightpose.upright_go, comdirect, lexoffice scan, luca, photoTAN, Übersetzer",
-          "typeConfig": {
-            "type": "TIME",
-            "timeFormat": "H'h' m'm' s's'",
-            "dateFormat": "",
-            "dateType": "date",
-            "timeType": "custom"
-          },
-          "aggregation": "AVG",
-          "ignore": false,
-          "tags": null
-        }
-      },
+      "aggregationConfig": {},
       "optionalTransformations": {
         "transpose": true,
         "cutRecords": false,
