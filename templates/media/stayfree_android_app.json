@@ -5,7 +5,7 @@
     "Select a location where to export and load the file into Dataflexor."
   ],
   "name": "StayFree Android App",
-  "id": "5fd1429c-319e-401d-bcf4-504dd027cc39",
+  "id": "9bf8ff7d-58bd-4b6e-b84c-c074523b5745",
   "appVersion": "0.1.3",
   "state": {
     "sourceState": {
@@ -39,7 +39,14 @@
       "newGroups": [],
       "minimumRecords": 10,
       "aggregationConfigBy": "group",
-      "aggregationConfig": {},
+      "aggregationConfig": {
+        "": {
+          "typeConfig": {
+            "timeType": "custom",
+            "timeFormat": "H'h' m'm' s's'"
+          }
+        }
+      },
       "optionalTransformations": {
         "transpose": true,
         "cutRecords": false,
@@ -69,7 +76,7 @@
         "cutRecords": true
       },
       "transposeHeader": 1,
-      "defaultsToZero": false,
+      "defaultsToZero": true,
       "defaultAggregation": "SUM",
       "defaultIgnore": true
     },
