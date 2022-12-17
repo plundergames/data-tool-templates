@@ -5,8 +5,8 @@
     "Select a location where to export and load the file into Dataflexor."
   ],
   "name": "StayFree Android App",
-  "id": "028e904b-a3c3-4e30-b385-848f82ac25df",
-  "appVersion": "0.1.2",
+  "id": "6bf33874-226f-4793-a1c4-2fea707aa958",
+  "appVersion": "0.1.3",
   "state": {
     "sourceState": {
       "csvFileConfig": {
@@ -35,6 +35,7 @@
       ],
       "nameRegexes": [],
       "groupedNames": [],
+      "copiedColumns": [],
       "newGroups": [],
       "minimumRecords": 10,
       "aggregationConfigBy": "group",
@@ -59,11 +60,12 @@
         "createGroups": false
       },
       "groupByConfig": [],
+      "groupByAggregationColumns": [],
       "conditionFilters": [],
       "dedupeColumns": [],
       "dedupeTakeLast": false,
-      "cutFirstRows": false,
-      "cutLastRows": 1,
+      "cutFirstRows": 1,
+      "cutLastRows": false,
       "openSections": {},
       "transposeHeader": 1
     },
