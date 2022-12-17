@@ -43,7 +43,8 @@
         "": {
           "typeConfig": {
             "timeType": "custom",
-            "timeFormat": "H'h' m'm' s's'"
+            "timeFormat": "H'h' m'm' s's'",
+            "type": "TIME_DEFAULT"
           }
         }
       },
