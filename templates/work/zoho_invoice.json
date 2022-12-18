@@ -3,8 +3,8 @@
     "Go to the Time Sheet Tab. Click on the options icon in the upper right corner. Select export Time Table."
   ],
   "name": "Zoho Invoice",
-  "id": "ad51b107-52c2-4198-a116-31ff963032d2",
-  "appVersion": "0.1.1",
+  "id": "5a246bc6-67b4-4ed4-a866-fce7c7f11408",
+  "appVersion": "0.1.3",
   "state": {
     "sourceState": {
       "csvFileConfig": {
@@ -17,140 +17,68 @@
       },
       "valueFormatConfig": {
         "hasCommaDecimals": false,
-        "splitValuesSeparators": []
+        "splitValuesSeparators": [],
+        "splitColumnsSeparators": []
       },
       "sourceFileType": "csv"
     },
     "sharedTransformationState": {
-      "idAggregationConfig": null,
+      "idAggregationConfig": [
+        {
+          "name": "log_date",
+          "typeConfig": {
+            "type": "DATE",
+            "timeFormat": "",
+            "dateFormat": "yyyy-MM-dd",
+            "dateType": "date",
+            "timeType": "ms",
+            "textMapping": null
+          },
+          "aggregation": "AVG",
+          "fillIds": true
+        }
+      ],
       "nameRegexes": [],
       "groupedNames": [],
+      "copiedColumns": [],
       "newGroups": [],
       "minimumRecords": 0,
       "aggregationConfigBy": "name",
       "aggregationConfig": {
-        "Begin time": {
-          "name": "Begin time",
-          "group": "No group",
-          "typeConfig": {
-            "type": "VALUE",
-            "timeFormat": "",
-            "dateFormat": "",
-            "dateType": "date",
-            "timeType": "ms",
-            "textMapping": null
-          },
-          "aggregation": "AVG",
-          "ignore": true,
-          "tags": null
+        "time_entry_id": {
+          "ignore": true
         },
-        "Billable Status": {
-          "name": "Billable Status",
-          "group": "No group",
-          "typeConfig": {
-            "type": "TAG",
-            "timeFormat": "",
-            "dateFormat": "",
-            "dateType": "date",
-            "timeType": "ms",
-            "textMapping": {
-              "defaultValue": 0,
-              "mapping": {}
-            }
-          },
-          "aggregation": "AVG",
-          "ignore": false,
-          "tags": null
+        "project_id": {
+          "ignore": true
         },
-        "Billed Status": {
-          "name": "Billed Status",
-          "group": "No group",
-          "typeConfig": {
-            "type": "BUCKET",
-            "timeFormat": "",
-            "dateFormat": "",
-            "dateType": "date",
-            "timeType": "ms",
-            "textMapping": null
-          },
-          "aggregation": "AVG",
-          "ignore": false,
-          "tags": null
+        "customer_id": {
+          "ignore": true
         },
-        "Email": {
-          "name": "Email",
-          "group": "No group",
-          "typeConfig": {
-            "type": "BUCKET",
-            "timeFormat": "",
-            "dateFormat": "",
-            "dateType": "date",
-            "timeType": "ms",
-            "textMapping": null
-          },
-          "aggregation": "AVG",
-          "ignore": true,
-          "tags": null
+        "task_id": {
+          "ignore": true
         },
-        "End time": {
-          "name": "End time",
-          "group": "No group",
-          "typeConfig": {
-            "type": "VALUE",
-            "timeFormat": "",
-            "dateFormat": "",
-            "dateType": "date",
-            "timeType": "ms",
-            "textMapping": null
-          },
-          "aggregation": "AVG",
-          "ignore": true,
-          "tags": null
+        "task_name": {
+          "ignore": true
         },
-        "Notes": {
-          "name": "Notes",
-          "group": "No group",
-          "typeConfig": {
-            "type": "BUCKET",
-            "timeFormat": "",
-            "dateFormat": "",
-            "dateType": "date",
-            "timeType": "ms",
-            "textMapping": null
-          },
-          "aggregation": "AVG",
-          "ignore": true,
-          "tags": null
+        "user_id": {
+          "ignore": true
         },
-        "Project Name": {
-          "name": "Project Name",
-          "group": "No group",
+        "log_time": {
           "typeConfig": {
-            "type": "TAG",
-            "timeFormat": "",
-            "dateFormat": "",
-            "dateType": "date",
-            "timeType": "ms",
-            "textMapping": null
+            "type": "TIME_DEFAULT"
           },
-          "aggregation": "AVG",
-          "ignore": false,
-          "tags": null
+          "aggregation": "SUM"
         },
-        "Task Name": {
-          "name": "Task Name",
-          "group": "No group",
+        "billed_status": {
           "typeConfig": {
-            "type": "VALUE",
-            "timeFormat": "",
-            "dateFormat": "",
-            "dateType": "date",
-            "timeType": "ms",
             "textMapping": null
-          },
-          "aggregation": "AVG",
-          "ignore": true,
-          "tags": null
+          }
+        },
+        "invoice_id": {
+          "ignore": true
+        },
+        "timer_duration_in_minutes": {
+          "ignore": true
         }
       },
       "optionalTransformations": {
@@ -158,10 +86,13 @@
       },
       "groupByConfig": [
         {
-          "name": "Staff Name",
+          "name": "user_name",
           "group": null,
           "activeGroups": null
         }
+      ],
+      "groupByAggregationColumns": [
+        "log_date-"
       ],
       "conditionFilters": [],
       "dedupeColumns": [],
@@ -169,12 +100,14 @@
       "cutFirstRows": false,
       "cutLastRows": false,
       "openSections": {},
-      "transposeHeader": 1
+      "transposeHeader": 1,
+      "defaultsToZero": false,
+      "defaultAggregation": "AVG",
+      "defaultIgnore": true
     },
     "logCsvState": {
       "groupsWithoutName": [],
-      "csvConfig": {},
-      "splitNamesSeparators": []
+      "csvConfig": {}
     }
   }
 }
