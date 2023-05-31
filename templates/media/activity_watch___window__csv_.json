@@ -3,7 +3,8 @@
     "Open the Activity Watch Web interface in the browser.",
     "Open the tab \"Raw Data\".",
     "For the bucket \"aw-watcher-window...\" click on the more-button and select \"export events as CSV\"",
-    "Load the file into Dataflexor."
+    "Load the file into Dataflexor.",
+    "General Hint: For me Activity Watch had problems exporting large amounts of data. My workaround is to export the data every few months and then delete the bucket (A new one is automatically created after)."
   ],
   "name": "Activity Watch - Window (CSV)",
   "id": "962ea528-2ef5-49df-a54e-8a7171ff7c1c",

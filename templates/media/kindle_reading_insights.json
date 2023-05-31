@@ -70,13 +70,6 @@
             "total_reading_milliseconds"
           ],
           "keepOriginal": true
-        },
-        {
-          "name": "Number of titles",
-          "items": [
-            "asin"
-          ],
-          "keepOriginal": true
         }
       ],
       "newGroups": [],
@@ -85,13 +78,6 @@
       "aggregationConfig": {
         "asin": {
           "ignore": true,
-          "typeConfig": {
-            "type": "VALUE"
-          },
-          "aggregation": "COUNT UNIQUE"
-        },
-        "Number of titles": {
-          "ignore": false,
           "typeConfig": {
             "type": "VALUE"
           },
