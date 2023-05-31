@@ -8,7 +8,7 @@
     "Load the \"Kindle.reading-insights-sessions_with_adjustments.csv\" into Dataflexor."
   ],
   "name": "Kindle Reading Insights",
-  "id": "bac59880-d8e8-45f4-9b26-340ab7ecb77a",
+  "id": "350fe918-1dbc-4789-ad0a-3acd77ed1409",
   "appVersion": "0.1.3",
   "state": {
     "sourceState": {
@@ -51,7 +51,7 @@
       "groupedNames": [],
       "copiedColumns": [
         {
-          "name": "Total duration",
+          "name": "Total reading time",
           "items": [
             "total_reading_milliseconds"
           ],
@@ -70,24 +70,45 @@
             "total_reading_milliseconds"
           ],
           "keepOriginal": true
+        },
+        {
+          "name": "Number of titles",
+          "items": [
+            "asin"
+          ],
+          "keepOriginal": true
         }
       ],
       "newGroups": [],
       "minimumRecords": 0,
       "aggregationConfigBy": "name",
       "aggregationConfig": {
+        "asin": {
+          "ignore": true,
+          "typeConfig": {
+            "type": "VALUE"
+          },
+          "aggregation": "COUNT UNIQUE"
+        },
+        "Number of titles": {
+          "ignore": false,
+          "typeConfig": {
+            "type": "VALUE"
+          },
+          "aggregation": "COUNT UNIQUE"
+        },
         "end_time": {
           "ignore": true
         },
         "total_reading_milliseconds": {
           "ignore": true
         },
-        "Total duration": {
-          "aggregation": "SUM",
+        "Total reading time": {
           "typeConfig": {
             "type": "TIME_DEFAULT",
             "trimZerosConfig": {}
-          }
+          },
+          "aggregation": "SUM"
         },
         "Sessions": {
           "aggregation": "COUNT"
